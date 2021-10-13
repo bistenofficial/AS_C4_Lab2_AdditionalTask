@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +16,7 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
     private List<State> mStates;
     // Provide a direct reference to each of the views within a data item
 // Used to cache the views within the item layout for fast access
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
         public TextView nameCountry;
@@ -33,12 +32,6 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
             nameCountry = (TextView) itemView.findViewById(R.id.textView_countryName);
             population = (TextView) itemView.findViewById(R.id.textView_population);
             flagView = (ImageView) itemView.findViewById(R.id.imageView_flag);
-        }
-
-        @Override
-        public void onClick(View v)
-        {
-
         }
     }
 

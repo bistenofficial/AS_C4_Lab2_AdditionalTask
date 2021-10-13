@@ -31,29 +31,5 @@ public class MainActivity extends AppCompatActivity {
         rvContacts.setAdapter(adapter);
         // Set layout manager to position the items
         rvContacts.setLayoutManager(new LinearLayoutManager(this));
-        AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                State selectedState = (State)parent.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(),"Был выбран пункт "+selectedState.getName(),Toast.LENGTH_SHORT).show();
-            }
-        };
-        RecyclerView.OnItemTouchListener itemTouchListener = new RecyclerView.OnItemTouchListener() {
-            @Override
-            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-                return false;
-            }
-
-            @Override
-            public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-
-            }
-
-            @Override
-            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
-            }
-        };
     }
 }
